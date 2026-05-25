@@ -1,0 +1,16 @@
+{
+  "name": "binance-relay",
+  "version": "1.0.0",
+  "description": "Static-IP relay between Lovable Cloud and Binance APIs",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
