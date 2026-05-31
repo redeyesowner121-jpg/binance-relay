@@ -22,3 +22,21 @@ primary_region = "sin"
   cpu_kind = "shared"
   cpus = 1
   memory_mb = 256
+
+# Static IP configuration for Binance whitelist
+# Run these commands to allocate static IPs:
+#   fly ips allocate-v4
+#   fly ips allocate-v6
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    force_https = true
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
